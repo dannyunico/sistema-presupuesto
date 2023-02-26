@@ -14,12 +14,6 @@
           <span>Código de factura</span>
           <input type="text" v-model="form.Cod_Factura">
         </div>
-        <div class="table-fac">
-          <div v-for="(m ) in materiales">
-            {{ m.id }}
-            <a @click="addMaterial(m.codigo)" >add</a>
-          </div>
-        </div>
         <div class="d-flex table-fac">
               <v-select 
                 :options="buscarMaterial" 
@@ -101,8 +95,8 @@ export default{
           Numero_Factura: '',
           Cod_Factura: '',
           Material: [],
-          Herramientas: [1],
-          LaborIndirecta: [1],
+          Herramientas: [],
+          LaborIndirecta: [],
         },
         forms: [],
     }
@@ -145,7 +139,7 @@ methods:{
           this.form.Material = r.data.Material
           this.form.Herramientas = r.data.Herramientas
           this.form.LaborIndirecta = r.data.LaborIndirecta
-            
+          alert('Creado')
         })
         .catch(error => console.log(error))
   },

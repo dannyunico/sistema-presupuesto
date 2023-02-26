@@ -31,8 +31,7 @@ class FacturaSerializers(serializers.ModelSerializer):
 
 		model = Factura
 		fields = ['id', 'Titulo', 'Numero_Factura', 'Cod_Factura', 'Material', 'Herramientas', 'LaborIndirecta']
-	
-	Material = MaterialSerializers( many = True)
+		depth = 1
 	#Herramientas = HerramientasSerializers( many = True)
 	#LaborIndirecta = LaborIndirectaSerializers( many = True)
 

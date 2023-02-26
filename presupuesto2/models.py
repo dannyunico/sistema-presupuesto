@@ -8,7 +8,7 @@ class Material(models.Model):
 	title = models.CharField(max_length = 500)
 	unidad = models.CharField(max_length = 500)
 	precio = models.DecimalField(max_digits=15,decimal_places=2)
-	cantidad = models.IntegerField(default=1)  
+	cantidad = models.IntegerField(default=2)  
 
 class Herramientas(models.Model):
 
